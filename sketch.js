@@ -75,15 +75,20 @@ function draw() {
   playerArcher.display();
   computerArcher.display()
 
- // Uncomment and use correct for loop to display arrow using showArrow() function
+ 
  for (var i=0; i<playerArrows.length; i++) 
  {
  showArrows(i, playerArrows);
  }
 
+
+
+
+
+
 }
 
-
+/*********** Choose correct keyPressed() function out of these *************/
 
 function keyPressed() {
   if(keyCode === 32){
@@ -93,10 +98,15 @@ function keyPressed() {
     var angle = playerArcher.body.angle+PI/2;
     var arrow = new PlayerArrow(posX, posY, 100, 10);
     arrow.trajectory = [];
-    Matter.Body.setAngle(arrow.body, angle);
+    Matter.Body.setAngle(arrow.body);
     playerArrows.push(arrow);
   }
 }
+
+
+
+
+
 
 function keyReleased () {
 
